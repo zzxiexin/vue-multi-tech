@@ -7,7 +7,25 @@
     <router-view />
   </div>
 </template>
-
+<script>
+export default {
+  name: "App",
+  created() {
+    const params = {
+      test: "api-test"
+    };
+    this.$http.test
+      .test(params)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },
+  methods: {}
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
