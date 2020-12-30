@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <A name="xinxin" age="28" sex="male"></A>
     <router-view />
   </div>
 </template>
