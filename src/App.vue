@@ -4,10 +4,19 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <custome-component v-model="checked"></custome-component>{{ checked }}
     <router-view />
   </div>
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      checked: false
+    };
+  }
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
