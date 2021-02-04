@@ -1,18 +1,17 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Button v-permit="'add'">增加</Button>
+    <Button v-permit="'del'">删除</Button>
+    <Button v-permit="'edit'">编辑</Button>
+    <Button v-permit="'view'">查看</Button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import { directive } from "../directive";
+directive(["add", "del"]);
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
+  name: "Home"
 };
 </script>
